@@ -29,6 +29,14 @@ public class Todo
     @Column
     private Boolean isDone;
 
+    public Todo(Long id, String title, String detail, Date date, Boolean isDone) {
+        this.id = id;
+        this.title = title;
+        this.detail = detail;
+        this.date = date;
+        this.isDone = isDone;
+    }
+
     public Todo() {
     }
 
@@ -77,5 +85,13 @@ public class Todo
         return "Todo [date=" + date + ", detail=" + detail + ", id=" + id + ", isDone=" + isDone + ", title=" + title
                 + "]";
     }
-    
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof  Todo) {
+            Todo todo = (Todo) obj;
+            return todo.id.equals(this.id) && todo.title.equals(this.title);
+        }
+        return false;
+    }
 }

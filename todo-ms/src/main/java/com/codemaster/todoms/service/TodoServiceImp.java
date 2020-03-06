@@ -11,8 +11,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class TodoServiceImp implements TodoService {
 
-    @Autowired
     TodoRepo todoRepo;
+
+    public TodoServiceImp(@Autowired TodoRepo todoRepo) {
+        this.todoRepo = todoRepo;
+    }
 
     @Override
     public Todo getOne(Long id) {
@@ -35,5 +38,9 @@ public class TodoServiceImp implements TodoService {
     public Todo add(Todo todo) {
         return todoRepo.save(todo);
     }
-    
+
+
+
+
+
 }
