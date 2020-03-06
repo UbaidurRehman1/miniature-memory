@@ -1,9 +1,9 @@
-package com.codemaster.todoms.service;
+package com.codemaster.api.service;
 
 import java.util.List;
 
-import com.codemaster.todoms.entity.Todo;
-import com.codemaster.todoms.repo.TodoRepo;
+import com.codemaster.api.entity.Todo;
+import com.codemaster.api.fiegnProxy.Proxy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,28 +12,26 @@ import org.springframework.stereotype.Service;
 public class TodoServiceImp implements TodoService {
 
     @Autowired
-    TodoRepo todoRepo;
+    Proxy proxy;
 
     @Override
     public Todo getOne(Long id) {
-        return todoRepo.getOne(id);
+        return proxy.getOne(id);
     }
 
     @Override
     public List<Todo> getAll() {
-        return todoRepo.findAll();
+        return proxy.getAll();
     }
 
     @Override
     public Todo delete(Long id) {
-        Todo todo = getOne(id);
-        todoRepo.delete(todo);
-        return todo;
+        return proxy.delete(id);
     }
 
     @Override
     public Todo add(Todo todo) {
-        return todoRepo.save(todo);
+        return proxy.add(todo);
     }
     
 }

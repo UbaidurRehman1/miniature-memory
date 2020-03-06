@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ApiApplication",
+            "request": "launch",
+            "mainClass": "com.codemaster.api.ApiApplication",
+            "projectName": "api"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TodoMsApplication",
             "request": "launch",
             "mainClass": "com.codemaster.todoms.TodoMsApplication",

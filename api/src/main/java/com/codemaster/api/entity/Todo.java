@@ -1,32 +1,13 @@
-package com.codemaster.todoms.entity;
+package com.codemaster.api.entity;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@Entity
-@Table
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Todo
 {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Long id;
-    @Column
     private String title;
-    @Column
     private String detail;
-    @Column
     private Date date;
-    @Column
     private Boolean isDone;
 
     public Todo() {
