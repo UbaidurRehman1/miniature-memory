@@ -26,6 +26,8 @@
     - TodoMsApplication
     - ApiApplication
 
+#### API endpoints docs
+- ```http://localhost:8080/swagger-ui.html```
 
 ### API end points:
 - http://localhost:8080/todos (GET Todos)
