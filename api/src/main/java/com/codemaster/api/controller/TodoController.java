@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
 @RestController
-@RequestMapping("todo")
+@RequestMapping("todos")
 public class TodoController
 {
     @Autowired
@@ -36,7 +36,7 @@ public class TodoController
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public ResponseEntity<List<Todo>> getAll() {
         List<Todo> todos = todoService.getAll();
         if (todos.size() > 0)
@@ -60,7 +60,7 @@ public class TodoController
         return ResponseEntity.notFound().build();
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<Todo> add(@RequestBody Todo todo)
     {
         todo =  todoService.add(todo);
