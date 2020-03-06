@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TodoMsApplication",
+            "request": "launch",
+            "mainClass": "com.codemaster.todoms.TodoMsApplication",
+            "projectName": "todo-ms"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - NamingServerApplication",
+            "request": "launch",
+            "mainClass": "com.codemaster.namingserver.NamingServerApplication",
+            "projectName": "naming-server"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiGatewayServerApplication<api-gateway-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.codemaster.apigatewayserver.ApiGatewayServerApplication",
+            "projectName": "api-gateway-server",
+            "args": ""
+        }
+    ]
+}
